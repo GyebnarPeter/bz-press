@@ -4,6 +4,57 @@
   padding: 0;
 }
 
+body {
+  font-family: "Lora", serif;
+  line-height: 1.4;
+  color: #474747;
+}
+
+h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+}
+
+.decor-shape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.decor-shape__line {
+  width: 300px;
+  height: 1px;
+  background: #00874f;
+  margin: 0 20px;
+}
+.decor-shape__square {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #474747;
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 992px) {
+  .decor-shape__line {
+    width: 30%;
+  }
+}
+.float-box {
+  overflow: hidden;
+}
+
+.float-content {
+  height: 100%;
+  transition: 1.5s;
+  transform: translateY(-100%);
+  overflow: hidden;
+}
+
+.fade-first, .fade-second {
+  opacity: 0;
+  transition: 1s;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -90,12 +141,13 @@
   left: 0;
   width: 100%;
   height: 100vh;
+  color: #00874f;
   background: url("../../img/nav-bg-4.jpg") no-repeat center center;
   background-size: cover;
   z-index: 200;
-  font-family: "Montserrat", sans-serif;
   transition: 1s;
   transform: translateY(-100%);
+  font-family: "Montserrat", sans-serif;
 }
 .nav__close-button {
   display: flex;
@@ -117,7 +169,6 @@
 }
 .nav__contact span {
   display: block;
-  color: #00874f;
   font-size: 14px;
   margin-bottom: 5px;
 }
@@ -128,7 +179,6 @@
 }
 .nav__info span {
   display: block;
-  color: #00874f;
   font-size: 14px;
   margin-bottom: 5px;
 }
@@ -154,7 +204,7 @@
   border: 1px solid #81948c;
 }
 .nav__poster a:hover {
-  font-size: 20px;
+  font-size: 18px;
 }
 .nav__poster-bg {
   width: 80%;
@@ -243,8 +293,122 @@
     background-size: contain;
   }
 }
-main {
-  height: 100vh;
+.who-we-are__container {
+  max-width: 800px;
+  margin: 100px auto;
+  text-align: center;
+  position: relative;
+}
+.who-we-are h5 {
+  padding: 20px 0;
+  color: #00874f;
+}
+.who-we-are__shape-one {
+  position: absolute;
+  bottom: 0;
+  left: -250px;
+  width: 200px;
+}
+.who-we-are__shape-two {
+  position: absolute;
+  top: 0;
+  right: -250px;
+  width: 200px;
+}
+
+@media screen and (max-width: 1200px) {
+  .who-we-are__shape-one, .who-we-are__shape-two {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .who-we-are {
+    padding: 0 20px;
+  }
+}
+.products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 50%;
+  height: 45vh;
+  overflow: hidden;
+  position: relative;
+}
+.product h2 {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #474747;
+}
+.product h2 span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #ffffff;
+}
+.product a {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.product__background {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.product__background:hover {
+  transform: scale(1.1);
+  box-shadow: inset 0px 0px 100px 50px rgba(0, 0, 0, 0.5);
+}
+.product__flyer {
+  background: url("../../img/szorolap.jpg") no-repeat center center;
+  background-size: cover;
+}
+.product__notepad {
+  background: url("../../img/jegyzettomb.jpg") no-repeat center center;
+  background-size: cover;
+}
+.product__wide-format {
+  background: url("../../img/szelesformatum.jpg") no-repeat center center;
+  background-size: cover;
+}
+.product__variable-data {
+  background: url("../../img/valtozo-adattartalom.jpg") no-repeat center center;
+  background-size: cover;
+}
+.product__product-label {
+  background: url("../../img/termekcimke.png") no-repeat center center;
+  background-size: cover;
+}
+.product__self-writing {
+  background: url("../../img/atirotomb.jpg") no-repeat center center;
+  background-size: cover;
+}
+.product__showcase {
+  background: url("../../img/kirakat.jpg") no-repeat center center;
+  background-size: cover;
+}
+.product__t-shirt {
+  background: url("../../img/polo.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 992px) {
+  .products {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .product {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
