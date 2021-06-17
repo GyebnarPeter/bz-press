@@ -7,7 +7,7 @@ navOpenButton.onclick = () => nav.style.transform = "translateY(0)";
 navCloseButton.onclick = () => nav.style.transform = "translateY(-100%)";
 
 // Slider
-const sliderPages = document.querySelectorAll(".slider__page");
+/* const sliderPages = document.querySelectorAll(".slider__page");
 
 let i = 0;
 setInterval(function() {
@@ -15,7 +15,7 @@ setInterval(function() {
     sliderPages.forEach(item => item.style.opacity = "0");
     sliderPages[i].style.opacity = "1";
     ++i;
-}, 10000);
+}, 10000); */
 
 // Scroll animations
 const header = document.querySelector(".header");
@@ -44,7 +44,7 @@ window.onscroll = () => {
 
     // Float elements
     floatBoxes.forEach( box => {
-        if(document.documentElement.scrollTop > box.offsetTop - window.innerHeight + 1300) {
+        if(document.documentElement.scrollTop > box.offsetTop + 200) {
             box.firstElementChild.style.transform = "translateY(0)";
         }
     });

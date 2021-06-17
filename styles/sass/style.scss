@@ -26,7 +26,7 @@ h2 {
     &__line {
         width: 300px;
         height: 1px;
-        background: modules.$green;
+        background: modules.$purple;
         margin: 0 20px;
     }
 
@@ -69,13 +69,24 @@ h2 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 150px;
+    height: 100px;
     padding: 0 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: .5s;
     z-index: 100;
+    background: modules.$white;
+
+    &__border-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url("../../img/color-line.jpg") no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        height: 4px;
+    }
 
     &__logo {
         height: 100%;
@@ -87,16 +98,51 @@ h2 {
         }
 
         img {
-            height: 50%;
+            height: 80%;
+        }
+    }
+
+    &__nav-list {
+        list-style: none;
+        display: flex;
+        font-family: modules.$header-font;
+    }
+    
+    &__nav-item {
+        
+        a {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+            color: modules.$lightblack;
+            margin-left: 50px;
         }
     }
 }
 
 .header-scroll {
-    background: modules.$white;
-    height: 100px;
+    // background: modules.$white;
+    height: 80px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .1);
 }
+
+.subpage-header {
+    margin-top: 100px;
+    padding: 200px 0;
+    color: modules.$white;
+    text-transform: uppercase;
+    font-family: modules.$header-font;
+    font-size: 2em;
+    text-align: center;
+    background: url("../../img/subpage-header.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+/* .flyer-header {
+    background: url("../../img/valtozo-adattartalom.jpg") no-repeat center center;
+    background-size: cover;
+} */
 
 .nav-open-button {
     width: 40px;
@@ -105,15 +151,57 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    display: none;
 
     span {
         width: 100%;
         height: 2px;
-        background: modules.$red;
+        background: modules.$blue;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    .header__nav {
+        display: none;
     }
 }
 
 .slider {
+    width: 100%;
+    margin-top: 100px;
+    background: url("../../img/printer.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 200px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+        color: modules.$white;
+        font-size: 18px;
+        font-weight: 600;
+        width: 500px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: modules.$header-font;
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: modules.$white;
+        background: modules.$purple;
+        padding: 15px 20px;
+        margin-top: 30px;
+    }
+}
+
+/* .slider {
     width: 100%;
     height: 100vh;
     padding: 15px;
@@ -151,7 +239,7 @@ h2 {
         z-index: 50;
         position: relative;
     }
-}
+} */
 
 .nav {
     position: fixed;
@@ -159,7 +247,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100vh;
-    color: modules.$green;
+    color: modules.$blue;
     background: url("../../img/nav-bg-4.jpg") no-repeat center center;
     background-size: cover;
     z-index: 200;
@@ -224,10 +312,10 @@ h2 {
 
         a {
             text-decoration: none;
-            color: modules.$green;
+            color: modules.$blue;
             font-size: 16px;
             transition: .5s;
-            border: 1px solid #81948c;
+            border: 1px solid modules.$blue;
 
             &:hover {
                 font-size: 18px;
@@ -239,7 +327,7 @@ h2 {
         width: 80%;
         height: 100%;
         margin: 0 auto;
-        background: url("../../img/butterfly.png") no-repeat center center;
+        background: url("../../img/butterfly-2.png") no-repeat center center;
         background-size: cover;
         animation-name: scale;
         animation-duration: 5s;
@@ -304,7 +392,14 @@ h2 {
     100%  { transform: scale(1)  }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
+
+    .nav-open-button {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 900px) {
 
     .nav {
 
@@ -335,6 +430,14 @@ h2 {
 }
 
 .who-we-are {
+    position: relative;
+    overflow: hidden;
+
+    &__wave {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
     
     &__container {
         max-width: 800px;
@@ -345,20 +448,10 @@ h2 {
 
     h5 {
         padding: 20px 0;
-        color: modules.$green;
+        color: modules.$purple;
     }
 
-    &__shape-one {
-        position: absolute;
-        bottom: 0;
-        left: -250px;
-        width: 200px;
-    }
-
-    &__shape-two {
-        position: absolute;
-        top: 0;
-        right: -250px;
+    &__shape {
         width: 200px;
     }
 }
@@ -445,5 +538,317 @@ h2 {
 
     .product {
         width: 100%;
+    }
+}
+
+.product-info {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: modules.$header-font;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: modules.$lightblack;
+        border: 2px solid modules.$lightblack;
+        padding: 15px 20px;
+        margin-top: 30px;
+    }
+
+    &__details {
+        flex: 3;
+        padding: 50px;
+
+        details[open] summary {
+            background: modules.$blue;
+            color: white;
+            border: none;
+        }
+
+        details:first-child summary {
+            border: none;
+        }
+
+        summary {
+            padding: 20px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: modules.$header-font;
+            border-top: 1px solid rgba(0, 0, 0, .2);
+            font-size: 14px;
+        }
+
+        p {
+            padding: 20px 35px 0 35px;
+        }
+    }
+
+    &__title {
+        flex: 2;
+        padding: 50px;
+        
+        h2 {
+            text-transform: uppercase;
+            color: modules.$purple;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .product-info {
+        flex-direction: column-reverse;
+    }
+}
+
+.contact {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 100px 50px;
+        
+        h1, h2 {
+            font-family: modules.$header-font;
+            text-transform: uppercase;
+            color: modules.$purple;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: gray;
+            margin-bottom: 15px;
+        }
+
+        p:first-of-type {
+            width: 75%;
+            color: modules.$lightblack;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+        input, select, textarea {
+            border-width: 0 0 1px 0;
+            border-style: solid;
+            border-color: black;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 30px;
+
+            &::placeholder {
+                color: modules.$lightblack;
+                font-family: modules.$sub-font;
+            }
+        }
+
+        input[type=submit] {
+            width: 100px;
+            padding: 10px;
+            border: none;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            background: modules.$purple;
+            cursor: pointer;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        select {
+
+            &:invalid {
+                color: modules.$lightblack;
+                font-family: modules.$sub-font;
+            }
+        }
+
+        textarea {
+            border: 1px solid black;
+            height: 200px;
+        }
+
+        &__one-line {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            span {
+                width: 48%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .contact {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .contact {
+        
+        &__box {
+
+            p:first-of-type {
+                width: 100%;
+            }
+        }
+
+        &__form {
+
+            &__one-line {
+                display: block;
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    background: modules.$darkblue;
+    color: modules.$lightblue;
+    position: relative;
+    font-size: 14px;
+
+    a {
+        text-decoration: none;
+        color: modules.$lightblue;
+        transition: .5s;
+
+        &:hover {
+            color: modules.$blue;
+        }
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+        font-family: modules.$header-font;
+    }
+
+    &__top-border {
+        
+        img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    &__container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    &__boxes {
+        display: flex;
+        padding: 50px 0;
+    }
+
+    &__box {
+        flex: 1;
+        padding: 25px;
+
+        a {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        &:first-child {
+
+            img {
+                width: 200px;
+                margin-top: 20px;
+            }
+        }
+
+        /* &:last-child {
+
+            img {
+                width: 15px;
+                margin: 20px 10px 0 0;
+            }
+        } */
+    }
+
+    &__social-logo {
+        margin-top: 40px;
+    }
+
+    &__footnote {
+        border-top: 1px solid modules.$lightblue;
+        text-align: center;
+        padding: 30px 0;
+
+        a {
+            margin: 0 20px;
+            font-family: modules.$header-font;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .footer {
+
+        &__container {
+            width: 700px;
+        }
+
+        &__boxes {
+            flex-direction: column;
+        }
+
+        &__box {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .footer {
+
+        &__container {
+            width: 90%;
+        }
+
+        &__footnote {
+
+            a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
     }
 }

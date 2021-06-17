@@ -24,7 +24,7 @@ h2 {
 .decor-shape__line {
   width: 300px;
   height: 1px;
-  background: #00874f;
+  background: #e5097f;
   margin: 0 20px;
 }
 .decor-shape__square {
@@ -60,13 +60,23 @@ h2 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 150px;
+  height: 100px;
   padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: 0.5s;
   z-index: 100;
+  background: #ffffff;
+}
+.header__border-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../../img/color-line.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 4px;
 }
 .header__logo {
   height: 100%;
@@ -77,15 +87,43 @@ h2 {
   align-items: center;
 }
 .header__logo img {
-  height: 50%;
+  height: 80%;
+}
+.header__nav-list {
+  list-style: none;
+  display: flex;
+  font-family: "Ubuntu", sans-serif;
+}
+.header__nav-item a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  color: #474747;
+  margin-left: 50px;
 }
 
 .header-scroll {
-  background: #ffffff;
-  height: 100px;
+  height: 80px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
+.subpage-header {
+  margin-top: 100px;
+  padding: 200px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2em;
+  text-align: center;
+  background: url("../../img/subpage-header.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+/* .flyer-header {
+    background: url("../../img/valtozo-adattartalom.jpg") no-repeat center center;
+    background-size: cover;
+} */
 .nav-open-button {
   width: 40px;
   height: 20px;
@@ -93,55 +131,97 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  display: none;
 }
 .nav-open-button span {
   width: 100%;
   height: 2px;
-  background: red;
+  background: #00a0e3;
 }
 
+@media screen and (max-width: 1280px) {
+  .header__nav {
+    display: none;
+  }
+}
 .slider {
   width: 100%;
-  height: 100vh;
-  padding: 15px;
-  position: relative;
-}
-.slider__page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  transition: 1s;
-}
-.slider__page-one {
-  background: url("../../img/welcome-image-1.jpg") no-repeat center center fixed;
+  margin-top: 100px;
+  background: url("../../img/printer.jpg") no-repeat center center;
   background-size: cover;
+  padding: 200px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.slider__page-two {
-  background: url("../../img/welcome-image-2.jpg") no-repeat center center fixed;
-  background-size: cover;
+.slider p {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
 }
-.slider__page-three {
-  background: url("../../img/welcome-image-3.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-.slider__border {
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  z-index: 50;
-  position: relative;
+.slider a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  background: #e5097f;
+  padding: 15px 20px;
+  margin-top: 30px;
 }
 
+/* .slider {
+    width: 100%;
+    height: 100vh;
+    padding: 15px;
+    position: relative;
+
+    &__page {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transition: 1s;
+    }
+
+    &__page-one {
+        background: url("../../img/welcome-image-1.jpg") no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    &__page-two {
+        background: url("../../img/welcome-image-2.jpg") no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    &__page-three {
+        background: url("../../img/welcome-image-3.jpg") no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    &__border {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        border: 1px solid rgba(255, 255, 255, .2);
+        z-index: 50;
+        position: relative;
+    }
+} */
 .nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  color: #00874f;
+  color: #00a0e3;
   background: url("../../img/nav-bg-4.jpg") no-repeat center center;
   background-size: cover;
   z-index: 200;
@@ -198,10 +278,10 @@ h2 {
 }
 .nav__poster a {
   text-decoration: none;
-  color: #00874f;
+  color: #00a0e3;
   font-size: 16px;
   transition: 0.5s;
-  border: 1px solid #81948c;
+  border: 1px solid #00a0e3;
 }
 .nav__poster a:hover {
   font-size: 18px;
@@ -210,7 +290,7 @@ h2 {
   width: 80%;
   height: 100%;
   margin: 0 auto;
-  background: url("../../img/butterfly.png") no-repeat center center;
+  background: url("../../img/butterfly-2.png") no-repeat center center;
   background-size: cover;
   animation-name: scale;
   animation-duration: 5s;
@@ -273,7 +353,12 @@ h2 {
     transform: scale(1);
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
+  .nav-open-button {
+    display: flex;
+  }
+}
+@media screen and (max-width: 900px) {
   .nav__contact, .nav__info {
     display: none;
   }
@@ -293,6 +378,15 @@ h2 {
     background-size: contain;
   }
 }
+.who-we-are {
+  position: relative;
+  overflow: hidden;
+}
+.who-we-are__wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .who-we-are__container {
   max-width: 800px;
   margin: 100px auto;
@@ -301,18 +395,9 @@ h2 {
 }
 .who-we-are h5 {
   padding: 20px 0;
-  color: #00874f;
+  color: #e5097f;
 }
-.who-we-are__shape-one {
-  position: absolute;
-  bottom: 0;
-  left: -250px;
-  width: 200px;
-}
-.who-we-are__shape-two {
-  position: absolute;
-  top: 0;
-  right: -250px;
+.who-we-are__shape {
   width: 200px;
 }
 
@@ -408,6 +493,241 @@ h2 {
 
   .product {
     width: 100%;
+  }
+}
+.product-info {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 0;
+  display: flex;
+}
+.product-info p {
+  margin-bottom: 20px;
+}
+.product-info a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #474747;
+  border: 2px solid #474747;
+  padding: 15px 20px;
+  margin-top: 30px;
+}
+.product-info__details {
+  flex: 3;
+  padding: 50px;
+}
+.product-info__details details[open] summary {
+  background: #00a0e3;
+  color: white;
+  border: none;
+}
+.product-info__details details:first-child summary {
+  border: none;
+}
+.product-info__details summary {
+  padding: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+}
+.product-info__details p {
+  padding: 20px 35px 0 35px;
+}
+.product-info__title {
+  flex: 2;
+  padding: 50px;
+}
+.product-info__title h2 {
+  text-transform: uppercase;
+  color: #e5097f;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .product-info {
+    flex-direction: column-reverse;
+  }
+}
+.contact {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+}
+.contact__box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 100px 50px;
+}
+.contact__box h1, .contact__box h2 {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  color: #e5097f;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+}
+.contact__box p {
+  color: gray;
+  margin-bottom: 15px;
+}
+.contact__box p:first-of-type {
+  width: 75%;
+  color: #474747;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+}
+.contact__form input, .contact__form select, .contact__form textarea {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: black;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.contact__form input::placeholder, .contact__form select::placeholder, .contact__form textarea::placeholder {
+  color: #474747;
+  font-family: "Montserrat", sans-serif;
+}
+.contact__form input[type=submit] {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: #e5097f;
+  cursor: pointer;
+}
+.contact__form input:focus {
+  outline: none;
+}
+.contact__form select:invalid {
+  color: #474747;
+  font-family: "Montserrat", sans-serif;
+}
+.contact__form textarea {
+  border: 1px solid black;
+  height: 200px;
+}
+.contact__form__one-line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.contact__form__one-line span {
+  width: 48%;
+}
+
+@media screen and (max-width: 992px) {
+  .contact {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact__box p:first-of-type {
+    width: 100%;
+  }
+  .contact__form__one-line {
+    display: block;
+  }
+}
+.footer {
+  width: 100%;
+  background: #10182f;
+  color: #626a89;
+  position: relative;
+  font-size: 14px;
+}
+.footer a {
+  text-decoration: none;
+  color: #626a89;
+  transition: 0.5s;
+}
+.footer a:hover {
+  color: #00a0e3;
+}
+.footer p {
+  margin-bottom: 10px;
+}
+.footer h3 {
+  margin-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+.footer__top-border img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.footer__container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.footer__boxes {
+  display: flex;
+  padding: 50px 0;
+}
+.footer__box {
+  flex: 1;
+  padding: 25px;
+  /* &:last-child {
+
+      img {
+          width: 15px;
+          margin: 20px 10px 0 0;
+      }
+  } */
+}
+.footer__box a {
+  display: block;
+  margin-bottom: 10px;
+}
+.footer__box:first-child img {
+  width: 200px;
+  margin-top: 20px;
+}
+.footer__social-logo {
+  margin-top: 40px;
+}
+.footer__footnote {
+  border-top: 1px solid #626a89;
+  text-align: center;
+  padding: 30px 0;
+}
+.footer__footnote a {
+  margin: 0 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+@media screen and (max-width: 992px) {
+  .footer__container {
+    width: 700px;
+  }
+  .footer__boxes {
+    flex-direction: column;
+  }
+  .footer__box {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__container {
+    width: 90%;
+  }
+  .footer__footnote a {
+    display: block;
+    margin: 5px 0;
   }
 }
 
