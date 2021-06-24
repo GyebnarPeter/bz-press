@@ -199,9 +199,10 @@ body {
     background: url("../../img/nav-bg.webp") no-repeat center center;
     background-size: cover;
     z-index: 2000;
-    transition: 1s;
+    transition: .7s;
     transform: translateY(-100%);
     font-family: modules.$sub-font;
+    opacity: 0;
 
     &__close-button {
         display: flex;

@@ -171,9 +171,10 @@ body {
   background: url("../../img/nav-bg.webp") no-repeat center center;
   background-size: cover;
   z-index: 2000;
-  transition: 1s;
+  transition: 0.7s;
   transform: translateY(-100%);
   font-family: "Montserrat", sans-serif;
+  opacity: 0;
 }
 .nav__close-button {
   display: flex;
